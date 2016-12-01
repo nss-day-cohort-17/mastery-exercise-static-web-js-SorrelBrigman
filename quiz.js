@@ -5,10 +5,11 @@ var tree = function () {}
 // 1. A key that specifies the height of the pine tree.
 var treeHeight;
 // 1. The value for the height of the tree should be from user input in a `<input type="text">` field in the DOM.
+var treeHeight = document.querySelector("how-tall").innerHTML;
 // 1. A key that specifies which character to use to build the pine tree.
 var treeChar;
 // 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
-
+var treeChar = document.querySelector("what-char").innerHTML
 // Once the user enters in a number, and a character,
    // the user can either then just press the enter key _(as long as the cursor is in one of the input fields)_,
    //or click a button that is labeled "Grow your tree" and the tree should be shown in the console.
