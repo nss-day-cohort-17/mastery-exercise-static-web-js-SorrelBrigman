@@ -15,11 +15,10 @@ var treeBuilder = [];
 var tree = function () {
   // 1. The value for the height of the tree should be from user input in a `<input type="text">` field in the DOM.
       //and convert to a number
-    var userTreeHeight = parseInt(document.querySelector("how-tall").innerHTML);
+    var userTreeHeight = parseInt(document.querySelector(".how-tall").value);
     myTree.treeHeight = userTreeHeight;
-
 // 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
-    var userTreeChar = document.querySelector("what-char").innerHTML;
+    var userTreeChar = document.querySelector(".what-char").value;
     myTree.treeChar = userTreeChar;
       //include  3 apostrophes, then js
   console.log("'''js");
@@ -34,7 +33,7 @@ var tree = function () {
     for (var k = 0; k < ((i * 2) + 1); k++) {
       //char increases by 2 each line
       //base of tree = (treeHeight X 2) - 1
-      treeBuilder[i] = treeBuilder[i] +treeChar;
+      treeBuilder[i] = treeBuilder[i] + treeBuilder[i].treeChar;
     }
     console.log(treeBuilder[i]);
   }
