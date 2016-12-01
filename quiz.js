@@ -12,7 +12,8 @@ var myTree = {
 //Create array that will output in console log one string at a time;
 var treeBuilder = [];
 // Create a `tree` function that should build a pine tree out of a character in the Chrome dev tools console.
-var tree = function () {
+// ### It accepts a single object as an argument. The object should have two key/value pairs.
+var tree = function (myTree) {
   // 1. The value for the height of the tree should be from user input in a `<input type="text">` field in the DOM.
       //and convert to a number
     var userTreeHeight = parseInt(document.querySelector(".how-tall").value);
@@ -41,14 +42,23 @@ var tree = function () {
     //conclude with three closing apostrophes
   console.log("'''");
 }
+
+
+// If either of the input fields does not have a value in it when the user presses the enter key,
+     //or presses the button, then display an alert stating that both fields must have a value.
+var checkFields = function () {
+  if (document.querySelector(".how-tall").value !== null || document.querySelector(".what-char").value !== null) {
+    tree(myTree);
+  } else {
+    alert("Both fields must have a value");
+  }
+}
+
 // Once the user enters in a number, and a character,
 
    // the user can either then just press the enter key _(as long as the cursor is in one of the input fields)_,
 
    //or click a button that is labeled "Grow your tree" and the tree should be shown in the console.
    var but = document.querySelector(".grow");
-   but.addEventListener("click", tree);
+   but.addEventListener("click", checkFields);
    //This requires you to add an event listener to the button, as well as an event listener for the enter/return key.
-
-// If either of the input fields does not have a value in it when the user presses the enter key,
-     //or presses the button, then display an alert stating that both fields must have a value.
