@@ -47,10 +47,10 @@ var tree = function (myTree) {
 // If either of the input fields does not have a value in it when the user presses the enter key,
      //or presses the button, then display an alert stating that both fields must have a value.
 var checkFields = function () {
-  if (document.querySelector(".how-tall").value !== null || document.querySelector(".what-char").value !== null) {
-    tree(myTree);
-  } else {
+  if (document.querySelector(".how-tall").value === "" || document.querySelector(".what-char").value === "") {
     alert("Both fields must have a value");
+  } else {
+   tree(myTree);
   }
 }
 
