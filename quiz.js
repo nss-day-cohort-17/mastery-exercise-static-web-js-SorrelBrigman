@@ -9,16 +9,18 @@ var myTree = {
 
 
 
-
 //Create array that will output in console log one string at a time;
 var treeBuilder = [];
 // Create a `tree` function that should build a pine tree out of a character in the Chrome dev tools console.
 var tree = function () {
   // 1. The value for the height of the tree should be from user input in a `<input type="text">` field in the DOM.
-    myTree.treeHeight = document.querySelector("how-tall").innerHTML;
+      //and convert to a number
+    var userTreeHeight = parseInt(document.querySelector("how-tall").innerHTML);
+    myTree.treeHeight = userTreeHeight;
 
 // 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
-    myTree.treeChar = document.querySelector("what-char").innerHTML
+    var userTreeChar = document.querySelector("what-char").innerHTML;
+    myTree.treeChar = userTreeChar;
       //include  3 apostrophes, then js
   console.log("'''js");
   for (var i = 0; i <= myTree.treeHeight; i++) {
@@ -41,8 +43,12 @@ var tree = function () {
   console.log("'''");
 }
 // Once the user enters in a number, and a character,
+
    // the user can either then just press the enter key _(as long as the cursor is in one of the input fields)_,
+
    //or click a button that is labeled "Grow your tree" and the tree should be shown in the console.
+   var but = document.querySelector(".grow");
+   but.addEventListener("click", tree);
    //This requires you to add an event listener to the button, as well as an event listener for the enter/return key.
 
 // If either of the input fields does not have a value in it when the user presses the enter key,
