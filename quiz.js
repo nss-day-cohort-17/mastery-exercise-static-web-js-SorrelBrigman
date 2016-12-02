@@ -24,9 +24,9 @@ var tree = function (myTree) {
       //include  3 apostrophes, then js
   console.log("'''js");
   for (var i = 0; i <= myTree.treeHeight; i++) {
-
     //number of spaces for top of tree = treeHeight - 1
         //space decrease by one each line
+        treeBuilder[i] = "";
     for (var j = 0; j < myTree.treeHeight; j++) {
       //will add value of (i-1) spaces to each line
       treeBuilder[i] = treeBuilder[i] + " ";
@@ -34,7 +34,7 @@ var tree = function (myTree) {
     for (var k = 0; k < ((i * 2) + 1); k++) {
       //char increases by 2 each line
       //base of tree = (treeHeight X 2) - 1
-      treeBuilder[i] = treeBuilder[i] + treeBuilder[i].treeChar;
+      treeBuilder[i] = treeBuilder[i] + myTree.treeChar;
     }
     console.log(treeBuilder[i]);
   }
