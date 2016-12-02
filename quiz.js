@@ -34,9 +34,13 @@ var tree = function (myTree) {
     for (var k = 0; k < ((i * 2) + 1); k++) {
       //char increases by 2 each line
       //base of tree = (treeHeight X 2) - 1
-      treeBuilder[i] = treeBuilder[i] + myTree.treeChar;
+      if (k === 0) {
+        treeBuilder[i] = "%c" + treeBuilder[i] + myTree.treeChar;
+      } else {
+        treeBuilder[i] = treeBuilder[i] + myTree.treeChar;
+      }
     }
-    console.log(treeBuilder[i]);
+    console.log(treeBuilder[i], "background: red; color: green");
   }
 
     //conclude with three closing apostrophes
