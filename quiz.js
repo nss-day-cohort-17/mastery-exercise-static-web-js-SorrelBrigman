@@ -57,6 +57,20 @@ var checkFields = function () {
 // Once the user enters in a number, and a character,
 
    // the user can either then just press the enter key _(as long as the cursor is in one of the input fields)_,
+      //Enter will send form
+      //if user in tree height text field
+      document.querySelector(".how-tall").addEventListener("keyup", function (e) {
+          if (e.keyCode === 13){
+            checkFields();
+          }
+        });
+      //if use in tree char text field
+      //Enter will send form
+     document.querySelector(".what-char").addEventListener("keyup", function (e) {
+          if (e.keyCode === 13){
+            checkFields();
+          }
+        });
 
    //or click a button that is labeled "Grow your tree" and the tree should be shown in the console.
    var but = document.querySelector(".grow");
