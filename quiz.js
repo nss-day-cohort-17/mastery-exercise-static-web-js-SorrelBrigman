@@ -21,8 +21,6 @@ var tree = function (myTree) {
 // 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
     var userTreeChar = document.querySelector(".what-char").value;
     myTree.treeChar = userTreeChar;
-      //include  3 apostrophes, then js
-  console.log("'''js");
   for (var i = 0; i <= myTree.treeHeight; i++) {
     //number of spaces for top of tree = treeHeight - 1
         //space decrease by one each line
@@ -42,9 +40,6 @@ var tree = function (myTree) {
     }
     console.log(treeBuilder[i], "background: red; color: green");
   }
-
-    //conclude with three closing apostrophes
-  console.log("'''");
 }
 
 
