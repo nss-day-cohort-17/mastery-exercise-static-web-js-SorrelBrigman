@@ -27,7 +27,7 @@ var tree = function (myTree) {
     //number of spaces for top of tree = treeHeight - 1
         //space decrease by one each line
         treeBuilder[i] = "";
-    for (var j = 0; j < myTree.treeHeight; j++) {
+    for (var j = 0; j < (myTree.treeHeight - i); j++) {
       //will add value of (i-1) spaces to each line
       treeBuilder[i] = treeBuilder[i] + " ";
     }
