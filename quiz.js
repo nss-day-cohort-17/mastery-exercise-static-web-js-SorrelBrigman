@@ -21,7 +21,7 @@ var tree = function (myTree) {
 // 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
     var userTreeChar = document.querySelector(".what-char").value;
     myTree.treeChar = userTreeChar;
-  for (var i = 0; i <= myTree.treeHeight; i++) {
+  for (var i = 0; i < myTree.treeHeight; i++) {
     //number of spaces for top of tree = treeHeight - 1
         //space decrease by one each line
         treeBuilder[i] = "";
