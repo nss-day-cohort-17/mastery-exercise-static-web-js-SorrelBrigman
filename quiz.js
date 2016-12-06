@@ -7,6 +7,17 @@ var myTree = {
   treeChar: ""
 }
 
+//Creat a function that will capture user input
+var userInput = function () {
+ // 1. The value for the height of the tree should be from user input in a `<input type="text">` field in the DOM.
+      //and convert to a number
+    var userTreeHeight = parseInt(document.querySelector(".how-tall").value);
+    myTree.treeHeight = userTreeHeight;
+// 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
+    var userTreeChar = document.querySelector(".what-char").value;
+    myTree.treeChar = userTreeChar;
+
+}
 
 
 //Create array that will output in console log one string at a time;
@@ -14,13 +25,7 @@ var treeBuilder = [];
 // Create a `tree` function that should build a pine tree out of a character in the Chrome dev tools console.
 // ### It accepts a single object as an argument. The object should have two key/value pairs.
 var tree = function (myTree) {
-  // 1. The value for the height of the tree should be from user input in a `<input type="text">` field in the DOM.
-      //and convert to a number
-    var userTreeHeight = parseInt(document.querySelector(".how-tall").value);
-    myTree.treeHeight = userTreeHeight;
-// 1. The character to use should be from user input in a `<input type="text">` field in the DOM.
-    var userTreeChar = document.querySelector(".what-char").value;
-    myTree.treeChar = userTreeChar;
+
   for (var i = 0; i < myTree.treeHeight; i++) {
     //number of spaces for top of tree = treeHeight - 1
         //space decrease by one each line
@@ -49,6 +54,7 @@ var checkFields = function () {
   if (document.querySelector(".how-tall").value === "" || document.querySelector(".what-char").value === "") {
     alert("Both fields must have a value");
   } else {
+   userInput();
    tree(myTree);
   }
 }
